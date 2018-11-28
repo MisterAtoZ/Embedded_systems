@@ -1,0 +1,1 @@
+arm-none-eabi-gcc -O0 -DRPIBPLUS -mfpu=vfp -mfloat-abi=hard -march=armv6zk -mtune=arm1176jzf-s -nostartfiles -g ts.s t.ld blinking_LED.c -o kernel.elf
