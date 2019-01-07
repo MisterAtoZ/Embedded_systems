@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="uart-driver" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uart">
+         <Option output="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/uart" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRPIBPLUS=1" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/include" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/include" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/include-fixed" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 uart" />
+            <CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uart/fast">
+         <Option output="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/uart" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRPIBPLUS=1" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/include" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/include" />
+            <Add directory="/usr/lib/gcc/arm-none-eabi/4.9.3/include-fixed" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 uart/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/defines.h">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.c">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.h">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-interrupts.c">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-interrupts.h">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.c">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.h">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/uart-cstartup.c">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/uart-start.s">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/uart.c">
+         <Option target="uart"/>
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/toolchain-arm-none-eabi-rpibplus.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

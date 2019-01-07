@@ -112,8 +112,5 @@
       <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/interrupted_UART/toolchain-arm-none-eabi-rpibplus.cmake">
           <Option virtualFolder="CMake Files\" />
       </Unit>
-      <Unit filename="/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/interrupted_UART/toolchain-arm-none-eabi-rpibplus.cmake">
-          <Option virtualFolder="CMake Files\" />
-      </Unit>
    </Project>
 </CodeBlocks_project_file>
