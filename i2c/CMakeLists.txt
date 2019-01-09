@@ -32,7 +32,7 @@
 cmake_minimum_required( VERSION 2.8 )
 
 # Set the tutorial number so it's easier to re-use the CMakeLists.txt
-set( NAME uart )
+set( NAME main )
 
 # Mark the language as C so that CMake doesn't try to test the C++
 # cross-compiler's ability to compile a simple program because that will fail
@@ -48,14 +48,21 @@ set( CMAKE_EXE_LINKER_FLAGS "-Wl,-T,${PROJECT_SOURCE_DIR}/rpi.x" )
 
 add_executable( ${NAME}
     ${NAME}.c
-    ${NAME}-cstartup.c
-    ${NAME}-start.s
+    uart-cstartup.c
+    uart-start.s
     defines.h
     rpi-gpio.c
     rpi-gpio.h
     rpi-interrupts.c
     rpi-interrupts.h
-    rpi-uart.c )
+    rpi-uart.c
+    rpi-uart.h
+    rpi-i2c.c
+    rpi-i2c.h
+    acceleroSensor.c
+    acceleroSensor.h 
+    rpi-timer.c
+    rpi-timer.h )
 
 add_custom_command(
     TARGET ${NAME} POST_BUILD

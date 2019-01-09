@@ -7,16 +7,22 @@ interrupt-driven device driver for the Raspberry Pi 1 Model b+.
 #include "rpi-interrupts.h" // other exception handlers
 #include "rpi-gpio.h"
 #include "rpi-uart.h"
+#include "rpi-i2c.h"
+#include "acceleroSensor.h"
+#include "stdio.h"
 
 void kernel_main( unsigned int r0, unsigned int r1, unsigned int atags )
 {
 	gpio_init();
-	set_GPIO_alterfunc(&gpio[14], 4);
-	set_GPIO_alterfunc(&gpio[15], 4);
+	set_GPIO_alterfunc(&gpio[14], 4); //Set TX Pin
+	set_GPIO_alterfunc(&gpio[15], 4); //Set RX Pin
 
-	/************************************************************* 
-		LAB ASSIGNEMENT: ENABLE THE UART INTERRUPT IRQ HERE 
-	*************************************************************/
+	set_GPIO_pullup(&gpio[2]);
+	set_GPIO_pullup(&gpio[3]);
+
+	set_GPIO_alterfunc(&gpio[2], 4); //Set SDA Pin
+	set_GPIO_alterfunc(&gpio[3], 4); //Set SCL Pin
+
 	/* Enable the timer interrupt IRQ */
     RPI_GetIrqController()->Enable_IRQs_2 = RPI_IRQ_2_ARM_UART_IRQ;
 
@@ -25,11 +31,21 @@ void kernel_main( unsigned int r0, unsigned int r1, unsigned int atags )
 
 	/* Enable interrupts */
 	_unlock();
+	//uprintf("after unlock\r\n");
+	//Initialize I2C
+	i2c_init();
+
+	uprintf("\n\r\nSTARTING... \n\r");
+
+	acceleroSensor_setup();
 
 	char line[128];
 	while(1){
-		uprintf("Enter a line from UARTS\n\r");
+		uprintf("Begin while loop \n");
+		acceleroSensor_values();
+		delay_ms(1000);
+		/*uprintf("Enter a line from UARTS\n\r");
 		ugets(&uart, line);
-		uprintf("%s\n", line);
+		uprintf("%s\n", line);*/
 	}
 }

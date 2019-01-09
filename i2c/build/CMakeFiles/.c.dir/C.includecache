@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/defines.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.c
+rpi-gpio.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.h
+defines.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/defines.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-interrupts.c
+stdint.h
+-
+stdbool.h
+-
+rpi-interrupts.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-interrupts.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-interrupts.h
+stdint.h
+-
+defines.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/defines.h
+rpi-uart.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.c
+rpi-uart.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.h
+rpi-gpio.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-gpio.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/rpi-uart.h
+defines.h
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/defines.h
+
+/mnt/c/Users/Jonathan/Documents/UHasselt/Embeded_systems/i2c/uart-cstartup.c
+

@@ -39,6 +39,8 @@ extern void set_pin(GPIO *up);
 extern void clear_pin(GPIO *up);
 extern void enable_edge_detect(GPIO *up);
 extern int edge_detect(GPIO *up);
+extern void set_GPIO_pullup(GPIO *up);
+void clear_GPIO_pullup_down();
 
 static void clear_detect(GPIO *up);
 static int getBit(int bitNumber, int reg);

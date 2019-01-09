@@ -99,6 +99,24 @@ int edge_detect(GPIO *up){
 	else{return 0;}
 }
 
+void set_GPIO_pullup(GPIO *up) {
+    gpio_reg[GPIO_GPPUD] = 0b10;
+    int i;
+    for (i = 0; i<150; i++);
+   		gpio_reg[GPIO_GPPUDCLK0] = (1 << up->gpio_bit);
+    for (i = 0; i<150; i++);
+   		gpio_reg[GPIO_GPPUD] = 0;
+    	gpio_reg[GPIO_GPPUDCLK0] = (0 << up->gpio_bit);
+}
 
+void clear_GPIO_pullup_down() {
+    gpio_reg[GPIO_GPPUD] = 0b00;
+    int i;
+    for (i = 0; i<150; i++);
+    	gpio_reg[GPIO_GPPUDCLK0] = -1;
+    for (i = 0; i<150; i++);
+    	gpio_reg[GPIO_GPPUDCLK0] = 0;
+    	gpio_reg[GPIO_GPPUD] = 0b00;
+}
 
 

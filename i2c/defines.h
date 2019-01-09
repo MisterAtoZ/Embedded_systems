@@ -31,6 +31,8 @@ typedef unsigned int   u32;
 // GPIO 
 #define GPIO_BASE	0x20200000
 
+#define SYSTEM_TIMER_BASE 0x020003000
+
 #define GPIO_GPFSEL0    0
 #define GPIO_GPFSEL1    1
 #define GPIO_GPFSEL2    2
