@@ -3,6 +3,7 @@
 #include <math.h>
 struct Vector_Short r;
 
+//Used Arduino library: https://github.com/sparkfun/SparkFun_LSM9DS1_Arduino_Library/tree/master/src?fbclid=IwAR1H9gLeBL78jaVXri4p0c1R4uzGLJc_oBsL6kuxXn2zOwDZPXpomcNJgWI
 
 
 void writeRegister(unsigned int reg, unsigned int value) {
@@ -31,13 +32,14 @@ int acceleroSensor_begin() {
     unsigned int reg1 = 0x00;
     reg1 |= 0x0F;
     //reg1 |= (odrbw << 4);
-
+    
+    writeRegister(SENS_CTRL_REG4, 0b00000000); //Gyroscope disabled
     writeRegister(SENS_CTRL_REG5_XL, 0b01111000);//update every 2 sample, accelerometer activated on all axis //inputs the value of what the register should be (p51)
-    writeRegister(SENS_CTRL_REG6_XL, 0b00000000); //All on default values
+    writeRegister(SENS_CTRL_REG6_XL, 0b10100000); //Output data rate, chosen: 
     writeRegister(SENS_CTRL_REG7_XL, 0b00000000); //No filters are added
-   /* writeRegister(SENS_CTRL_REG8, 0b00000100); //More settings
+    writeRegister(SENS_CTRL_REG8, 0b00000100); //More settings
     writeRegister(SENS_CTRL_REG9, 0b00000010);//0b00000010); //FIFO memory enabled
-    writeRegister(SENS_CTRL_REG10, 0b00000000); //self test disabled*/
+    writeRegister(SENS_CTRL_REG10, 0b00000000); //self test disabled
 
     return 1;
 }
@@ -83,3 +85,22 @@ struct Vector_Short acceleroSensor_values() {
     return values;
 }
 
+
+void readAccel()
+{
+    unsigned int data[] = {(SENS_OUT_X_XL1 | (1 << 7))};
+    unsigned int buffer[6];
+
+    write_bytes(SENS_SLAVE_ADRESS, data, 1);
+
+    read_bytes(SENS_SLAVE_ADRESS, buffer, 6);
+    r.x = (buffer[1] << 8) | buffer[0]; // Store x-axis values into ax
+    r.y = (buffer[3] << 8) | buffer[2]; // Store y-axis values into ay
+    r.z = (buffer[5] << 8) | buffer[4]; // Store z-axis values into az
+    
+    /* //geen idee wat het moet doen
+    ax -= aBiasRaw[X_AXIS];
+    ay -= aBiasRaw[Y_AXIS];
+    az -= aBiasRaw[Z_AXIS];
+	*/
+}
