@@ -53,13 +53,12 @@ struct Vector_Short {
     short z;
 };
 
+short aBiasRaw[3];
+float aBias[3];
 
-void writeRegister(unsigned int reg, unsigned int value);
-unsigned int readRegister(unsigned int reg);
-int acceleroSensor_begin();
-struct Vector_Short readData();
-void acceleroSensor_setup();
-struct Vector_Short acceleroSensor_values();
+typedef int bool;
+#define true 1
+#define false 0
 
 // accel_scale defines all possible FSR's of the accelerometer:
 enum accel_scale
@@ -134,14 +133,14 @@ enum pp_od
 	INT_OPEN_DRAIN
 };
 
-enum fifoMode_type
+typedef enum 
 {
 	FIFO_OFF = 0,
 	FIFO_THS = 1,
 	FIFO_CONT_TRIGGER = 3,
 	FIFO_OFF_TRIGGER = 4,
 	FIFO_CONT = 5
-};
+} fifoMode_type;
 
 struct accelSettings //Mag missch ook weg!
 {
@@ -157,5 +156,16 @@ struct accelSettings //Mag missch ook weg!
 	uint8_t highResEnable;
 	uint8_t highResBandwidth;
 };
+
+void writeRegister(unsigned int reg, unsigned int value);
+unsigned int readRegister(unsigned int reg);
+int acceleroSensor_begin();
+struct Vector_Short readData();
+void acceleroSensor_setup();
+struct Vector_Short acceleroSensor_values();
+void readAccel();
+void enableFIFO(bool enable);
+void setFIFO(fifoMode_type fifoMode, unsigned int fifoThs);
+void calibrate();
 
 #endif
